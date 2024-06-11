@@ -54,5 +54,10 @@ describe(`Function 'checkPassword':`, () => {
       expect(checkPassword('p@ssword1'))
         .toBe(false);
     });
+
+    it(`without digit, special character, uppercase letter`, () => {
+      expect(checkPassword('newpassword'))
+        .toBe(false);
+    });
   });
 });
